@@ -5,7 +5,7 @@
 
 <p align="left"> <a href="https://twitter.com/uday_krn" target="blank"><img src="https://img.shields.io/twitter/follow/uday_krn?logo=twitter&style=for-the-badge" alt="uday_krn" /></a> </p>
 
-- 🌱 I’m currently learning **Nodejs**
+- 🌱 I’m currently Exploring **Databases**
 
 - 💬 Ask me about **Flutter**
 
