@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Uday</h1>
-<h3 align="center">A CSE | 3rd year Student, from India.</h3>
+<h3 align="center">A CSE | 4th year Student, from India.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=uday-kiran9147&label=Profile%20views&color=0e75b6&style=flat" alt="uday-kiran9147" /> </p>
 
