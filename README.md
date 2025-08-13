@@ -1,13 +1,13 @@
 <h1 align="center">Hi 👋, I'm Uday</h1>
-<h3 align="center">A CSE | 4th year Student, from India.</h3>
+<h3 align="center">A CSE IIITV | Graduate-2025, from India.</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=uday-kiran9147&label=Profile%20views&color=0e75b6&style=flat" alt="uday-kiran9147" /> </p>
 
 <p align="left"> <a href="https://twitter.com/uday_krn" target="blank"><img src="https://img.shields.io/twitter/follow/uday_krn?logo=twitter&style=for-the-badge" alt="uday_krn" /></a> </p>
 
-- 🔭 I’m currently working on **Databases**
+- 🔭 I’m currently working on **Deployments**
 
-- 🌱 I’m currently learning **Backend Technology**
+- 🌱 I’m currently learning **DevOps**
 
 - 💬 Ask me about **Flutter**
 
