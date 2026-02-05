@@ -6,7 +6,7 @@
   <a href="https://twitter.com/uday_krn" target="_blank">
     <img src="https://img.shields.io/twitter/follow/uday_krn?logo=twitter&style=flat-square" alt="Twitter Follow" />
   </a>
-  <a href="https://linkedin.com/in/uday-kiran" target="_blank">
+  <a href="[https://linkedin.com/in/uday-kiran](https://www.linkedin.com/in/uday-kiran-73a727233/)" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat-square&logo=linkedin" alt="LinkedIn" />
   </a>
 </p>
