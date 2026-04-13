@@ -1,5 +1,5 @@
 <h1 align="center">👋 Hey there, I'm Uday Kiran</h1>
-<h3 align="center">🚀 CSE @ IIIT Vadodara | Graduate 2025 | Full-Stack & Flutter Developer from India</h3>
+<h3 align="center">🚀 CSE @ IIIT Vadodara | Graduate 2025 | Backend & Mobile Developer from India</h3>
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=uday-kiran9147&label=Profile%20Views&color=blueviolet&style=flat-square" alt="profile views" />
