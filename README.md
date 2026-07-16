@@ -28,44 +28,76 @@ My work focuses on backend engineering, distributed workflows, payment systems, 
 
 ## Engineering Map
 
+## System Architecture
+ 
 ```text
-                    ┌──────────────┐
-                    │   Flutter    │
-                    └──────┬───────┘
-                           │
-                           ▼
-┌─────────────┐     ┌─────────────┐      ┌─────────────┐
-│  Firebase   │────▶│  Node.js    │◀────▶│    Redis    │
-└─────────────┘     │ TypeScript  │      └─────────────┘
-                    │   Express   │
-                    └──────┬──────┘
-                           │
-                           ▼
-                    ┌─────────────┐
-                    │   BullMQ    │
-                    │ WebSockets  │
-                    └──────┬──────┘
-                           │
-                           ▼
-                    ┌─────────────┐
-                    │ Docker/AWS  │
-                    │ Nginx/CI-CD │
-                    └─────────────┘
+┌─────────────────────────────────────────────────────────────────────┐
+│                          CLIENT LAYER                                │
+│  ┌───────────────┐   ┌───────────────┐   ┌───────────────┐          │
+│  │    Flutter    │   │  React / Next │   │   Admin Web   │          │
+│  │  (Riverpod)   │   │   (SSR/CSR)   │   │   Dashboard   │          │
+│  └───────┬───────┘   └───────┬───────┘   └───────┬───────┘          │
+└──────────┼───────────────────┼───────────────────┼──────────────────┘
+           │                   │                   │
+           └─────────┬─────────┴─────────┬─────────┘
+                      ▼                   ▼
+           ┌─────────────────────────────────────┐
+           │        API GATEWAY / NGINX           │
+           │   Rate Limiting · TLS · Load Balance │
+           └───────────────────┬───────────────────┘
+                                ▼
+           ┌─────────────────────────────────────┐
+           │             AUTH LAYER                │
+           │   JWT · Refresh Rotation · RBAC       │
+           │   Multi-Actor Sessions (3-role)       │
+           └───────────────────┬───────────────────┘
+                                ▼
+     ┌──────────────────────────────────────────────────────────┐
+     │                   APPLICATION SERVICES                     │
+     │        Node.js · TypeScript · Express (Modular Monolith)   │
+     │                                                              │
+     │  ┌───────────┐ ┌───────────┐ ┌───────────┐ ┌────────────┐ │
+     │  │  Orders    │ │ Payments  │ │ Discovery │ │ Messaging  │ │
+     │  │  Service   │ │  Ledger   │ │  GeoSearch│ │  WebSocket │ │
+     │  └─────┬──────┘ └─────┬─────┘ └─────┬─────┘ └─────┬──────┘ │
+     └────────┼──────────────┼─────────────┼─────────────┼────────┘
+              ▼              ▼             ▼             ▼
+     ┌──────────────┐ ┌─────────────┐ ┌───────────┐ ┌───────────┐
+     │   BullMQ      │ │  Razorpay   │ │  $geoNear │ │ Socket.io │
+     │ Queues/Retry  │ │  Route API  │ │  + Cache  │ │  Pub/Sub  │
+     └───────┬───────┘ └──────┬──────┘ └─────┬─────┘ └─────┬─────┘
+             │                │              │              │
+             └────────┬───────┴──────┬───────┴──────┬───────┘
+                       ▼              ▼              ▼
+           ┌─────────────────┐ ┌─────────────┐ ┌─────────────┐
+           │      Redis       │ │  MongoDB /  │ │  Firebase   │
+           │  Cache · Streams │ │  PostgreSQL │ │ Auth/FCM/   │
+           │  Pub/Sub         │ │  Ledger DB  │ │  Storage    │
+           └─────────────────┘ └─────────────┘ └─────────────┘
+                       │              │              │
+                       └──────┬───────┴──────┬───────┘
+                              ▼               ▼
+                 ┌─────────────────────────────────────┐
+                 │          INFRASTRUCTURE LAYER          │
+                 │  Docker · AWS EC2 · Nginx · GitHub CI  │
+                 │  Observability · Horizontal Scaling    │
+                 └─────────────────────────────────────┘
 ```
-
+ 
 ---
-
+ 
 ## Current Focus
-
-| Area                   | Technologies                          |
-| ---------------------- | ------------------------------------- |
-| ⚙️ Backend Engineering | Node.js, TypeScript, Express          |
-| ☁️ Infrastructure      | Docker, AWS EC2, Nginx                |
-| 📦 Distributed Systems | Redis, Queues, Event-Driven Design    |
-| 💳 Financial Systems   | Payments, Ledgers, Idempotency        |
-| 📱 Mobile Platforms    | Flutter, Riverpod, Offline-First Apps |
-| 🚀 DevOps              | GitHub Actions, CI/CD                 |
-
+ 
+| Area                    | Technologies                                |
+| ------------------------ | -------------------------------------------- |
+| ⚙️ Backend Engineering  | Node.js, TypeScript, Express                 |
+| 🌐 Frontend / Web        | React, Next.js, Tailwind CSS                 |
+| ☁️ Infrastructure       | Docker, AWS EC2, Nginx                       |
+| 📦 Distributed Systems  | Redis, Queues, Event-Driven Design           |
+| 💳 Financial Systems    | Payments, Ledgers, Idempotency               |
+| 📱 Mobile Platforms     | Flutter, Riverpod, Offline-First Apps        |
+| 🚀 DevOps               | GitHub Actions, CI/CD                        |
+ 
 ---
 
 ## Tech Stack
