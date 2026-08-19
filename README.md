@@ -342,8 +342,6 @@ Reliability Engineering
 
 <div align="center">
 
-🌐 Portfolio
-https://udaykrn.vercel.app
 
 💼 LinkedIn
 https://www.linkedin.com/in/uday-kiran-73a727233/
